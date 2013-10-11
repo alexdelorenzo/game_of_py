@@ -8,6 +8,10 @@ class Universe(list):
 		x, y = point
 		return self[x][y]
 
+	def rand_spread(self, x=10, y=10, times=10):
+		for n in xrange(times):
+			self.live((r((x,y)), r((x.y))))
+		
 	def on_plane(self, point):
 		x, y = point
 		all_positive = y >= 0 and x >= 0
